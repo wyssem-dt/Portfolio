@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - CTX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="icon" href="img/icon.png" />
+</head>
+<body class="bg-custom4">
+<div id="backButton" class="z-10 opacity-0 md:opacity-0 fixed bottom-0 right-20 transition-all ease-in-out delay-150 duration-300 w-11 h-11">
+    <button onclick="checkArticle()" class="text-white rounded-md p-2 bg-custom1 w-11 h-11 flex justify-center items-center hover:">
+        <svg class="w-5 h-5 text-white hover:w-6 hover:h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+        </svg>
+    </button>
+</div>
+<nav class="border-gray-200 transparent relative">
+    <div class="flex flex-wrap items-center justify-between mx-auto p-6 md:py-10 md:px-16">
+        <a href="#" class="flex items-center">
+            <div class="w-10 h-10 rounded-full"><img class="rounded-full" src="img/jordanfond.png" alt="icon"></div>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-transparent dark:border-gray-700">
+                <li class="">
+                    <a href="index.html#" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 md:text-custom1 text-white bg-custom1 rounded md:bg-transparent md:p-0 text-lg" aria-current="page">
+                        Accueil</a>
+                </li>
+                <li>
+                    <a href="index.html#whoiam" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 text-gray-900 rounded md:rounded-none hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-custom1 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-lg">
+                        A propos</a>
+                </li>
+                <li>
+                    <a href="index.html#experience" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 text-gray-900 rounded md:rounded-none hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-custom1 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-lg">
+                        Experiences</a>
+                </li>
+                <li>
+                    <a href="index.html#competence" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 text-gray-900 rounded md:rounded-none hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-custom1 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-lg">
+                        Compétences</a>
+                </li>
+                <li>
+                    <a href="index.html#projet" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 text-gray-900 rounded md:rounded-none hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-custom1 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-lg">
+                        Projets</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="flex flex-row items-center md:px-5 block py-2 pl-3 pr-4 text-gray-900 rounded md:rounded-none hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-custom1 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-lg">
+                        Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="mt-32">
+    <div class="flex items-center flex-col text-center ">
+        <h1 class="text-white text-4xl font-bold">Infrastructure réseau HSP</h1>
+        <div class="w-96 h-1 bg-custom1 mt-5"></div>
+        <div class="w-3/5 text-lg mt-5 text-center">
+            <p class="text-custom3 mt-3">Le projet avait pour but de réaliser une infrastructure réseau d'un hopital privé. Le coeur de réseau de l'hôpital HSP était géré par un switch CISCO 3550 qui contenait tout les VLAN de chaque service de l'hopital. L'accès au réseau pour les postes clients (système d'exploitation Windows) était assuré par des commutateurs CISCO 2960.<p>
+            <p class="text-custom3 mt-3">Le serveur DHCP avait pour rôle de distribuer des adresses IPv4 de manière dynamique aux postes clients de chaque VLAN, les utilisateurs étaient gérés par un contrôleur de domaine (serveur Active Directory) dont les unités d'organistaion (OU) regroupaient les utilisateurs par VLAN.</p>
+            <p class="text-custom3 mt-3">L'infrastructure serveur et les postes clients étaient virtualisée autour de la solution Hyper-V Infrastructure réseau HSP (Hôpital Sud Paris)</p>
+        </div>
+
+    </div>
+    <div class="mt-32 flex justify-center gap-x-24 gap-y-32 flex-wrap px-32 mb-20">
+        <div class="w-96">
+            <div class="w-96">
+                <h3 class="text-white text-2xl font-bold mt-5">Serveur AD</h3>
+                <p class="text-custom3 mt-3">Installation et configuration d'un Active Directory.</p>
+                <a href="files/Serveur_Active_Directory.pdf" class="w-32 mt-5 block text-white bg-custom1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Voir plus</a>
+            </div>
+        </div>
+        <div class="w-96">
+            <div class="w-96">
+                <h3 class="text-white text-2xl font-bold mt-5">GLPI</h3>
+                <p class="text-custom3 mt-3">Installation d'un logiciel de gestion des incidents et d'inventaire.</p>
+                <a href="files/glpi.pdf" class="w-32 mt-5 block text-white bg-custom1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Voir plus</a>
+            </div>
+        </div>
+        <div class="w-96">
+            <div class="w-96">
+                <h3 class="text-white text-2xl font-bold mt-5">Zabbix</h3>
+                <p class="text-custom3 mt-3">ZABBIX est un logiciel libre permettant de surveiller l'état de divers services réseau.</p>
+                <a href="files/Procedure_Zabbix.pdf" class="w-32 mt-5 block text-white bg-custom1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Voir plus</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    custom1: '#915EFF',
+                    custom2: '#101D28',
+                    custom3: '#AAA6C3',
+                    custom4: '#050816'
+                },
+                rotate: {
+                    'customBloc': '-5deg',
+                    'customBloc2': '5deg',
+                },
+                darkMode: 'class',
+            }
+        }
+    }
+</script>
+<script>
+    var backButton = document.getElementById('backButton');
+    var minScrollToShowButton = 200; // Réglez cette valeur en fonction de votre préférence
+
+    window.onscroll = function() {
+        var currentScrollPosition = window.scrollY;
+
+        if (currentScrollPosition > minScrollToShowButton) {
+            backButton.classList.add('md:opacity-100');
+            backButton.classList.remove('md:opacity-0');
+            backButton.classList.remove('bottom-0');
+            backButton.classList.add('bottom-16');
+        } else {
+            backButton.classList.add('md:opacity-0');
+            backButton.classList.remove('md:opacity-100');
+            backButton.classList.remove('bottom-16');
+            backButton.classList.add('bottom-0');
+        }
+    };
+
+    function checkArticle() {
+        const nav = document.getElementsByTagName('nav');
+        nav[0].scrollIntoView({
+            behavior: 'smooth',
+            offsetTop: 20
+        });
+
+    }
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+</html>
